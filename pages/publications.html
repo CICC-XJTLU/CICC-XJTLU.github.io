@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center for Cognitive Intelligence and Creative Computing</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-xl font-semibold text-gray-800 flex items-center">
+                    <span class="inline-block mr-2"><i class="fas fa-microscope text-blue-500"></i></span>
+                    <span data-i18n="lab-name">认知智能与创意计算重点实验室</span>
+                </a>
+                
+                <!-- 桌面导航栏 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a>
+                    <a href="research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
+                    <a href="team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
+                    <a href="publications.html" class="nav-link active" data-i18n="nav-publications">科研成果</a>
+                    <a href="contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
+                    
+                    <!-- GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-3 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
+                    <!-- 移动端GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-2 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
+            <div class="container mx-auto px-4 py-3">
+                <a href="../index.html" class="mobile-nav-link block py-2" data-i18n="nav-home">首页</a>
+                <a href="research.html" class="mobile-nav-link block py-2" data-i18n="nav-research">研究方向</a>
+                <a href="team.html" class="mobile-nav-link block py-2" data-i18n="nav-team">团队成员</a>
+                <a href="publications.html" class="mobile-nav-link active block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 进度条 -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-blue-500 z-50"></div>
+
+    <!-- 页面标题 -->
+    <header class="pt-24 pb-12 bg-gradient-to-r from-blue-500 to-blue-600">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="publications-page-title">科研成果</h1>
+                <p class="text-xl text-blue-100" data-i18n="publications-page-subtitle">展示我们在人机交互与人工智能领域的最新研究成果</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 成果统计 -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-2">50+</div>
+                    <div class="text-gray-600" data-i18n="papers-count">论文发表</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-2">20+</div>
+                    <div class="text-gray-600" data-i18n="patents-count">专利授权</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-2">10+</div>
+                    <div class="text-gray-600" data-i18n="projects-count">科研项目</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-2">5+</div>
+                    <div class="text-gray-600" data-i18n="tech-transfer-count">技术转化</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 论文发表 -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title" data-i18n="publications-title">论文发表</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- 筛选选项 -->
+            <div class="mb-12">
+                <!-- 年份筛选 -->
+                <div class="flex flex-wrap justify-center gap-4 mb-6">
+                    <span class="text-gray-700 font-medium my-auto mr-2" data-i18n="filter-by-year">按年份筛选：</span>
+                    <button class="year-filter-btn active" data-year="all" data-i18n="filter-all">全部</button>
+                    <button class="year-filter-btn" data-year="2025">2025</button>
+                    <button class="year-filter-btn" data-year="2024">2024</button>
+                    <button class="year-filter-btn" data-year="2023">2023</button>
+                    <button class="year-filter-btn" data-year="earlier" data-i18n="filter-earlier">更早</button>
+                </div>
+                
+                <!-- 论文类型筛选 -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="text-gray-700 font-medium my-auto mr-2" data-i18n="filter-by-type">按类型筛选：</span>
+                    <button class="type-filter-btn active" data-type="all" data-i18n="filter-all">全部</button>
+                    <button class="type-filter-btn" data-type="nlp" data-i18n="filter-type-nlp">NLP</button>
+                    <button class="type-filter-btn" data-type="大模型" data-i18n="filter-type-llm">大模型</button>
+                    <button class="type-filter-btn" data-type="软件工程" data-i18n="filter-type-se">软件工程</button>
+                    <button class="type-filter-btn" data-type="hcai" data-i18n="filter-type-hcai">HCAI</button>
+                    <button class="type-filter-btn" data-type="3d重建" data-i18n="filter-type-3d">3D重建</button>
+                </div>
+            </div>
+
+            <!-- 论文列表 - 动态加载 -->
+            <div id="papers-list" class="space-y-8">
+                <!-- 内容将由JavaScript动态加载 -->
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="text-center mt-12">
+                <button id="load-more-papers" class="btn-outline" data-i18n="load-more">
+                    加载更多
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专利与获奖 -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title" data-i18n="patents-awards-title">专利与获奖</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 专利列表 - 动态加载 -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" data-i18n="patents-title">发明专利</h3>
+                    <div id="patents-list" class="space-y-6">
+                        <!-- 内容将由JavaScript动态加载 -->
+                    </div>
+                    <!-- 加载更多按钮 -->
+                    <div class="text-center mt-8">
+                        <button id="load-more-patents" class="btn-outline" data-i18n="load-more">
+                            加载更多
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 获奖列表 - 动态加载 -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" data-i18n="awards-title">获奖情况</h3>
+                    <div id="awards-list" class="space-y-6">
+                        <!-- 内容将由JavaScript动态加载 -->
+                    </div>
+                    <!-- 加载更多按钮 -->
+                    <div class="text-center mt-8">
+                        <button id="load-more-awards" class="btn-outline" data-i18n="load-more">
+                            加载更多
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术转化 -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title" data-i18n="tech-transfer-title">技术转化</h2>
+                <div class="section-divider"></div>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12" data-i18n="tech-transfer-subtitle">
+                    我们致力于将研究成果转化为实际应用，为产业发展提供技术支持。
+                </p>
+            </div>
+
+            <!-- 技术转化列表 - 动态加载 -->
+            <div id="transfers-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 内容将由JavaScript动态加载 -->
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="text-center mt-12">
+                <button id="load-more-transfers" class="btn-outline" data-i18n="load-more">
+                    加载更多
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">认知智能与创意计算重点实验室</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="lab-footer-desc">
+                        致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="quick-links">快速链接</h3>
+                        <div class="flex flex-wrap -mx-2">
+                            <a href="../index.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-home">首页</a>
+                            <a href="research.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-research">研究方向</a>
+                            <a href="team.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-team">团队成员</a>
+                            <a href="publications.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-publications">科研成果</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-contact">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="contact-info">联系方式</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                                <span data-i18n="address">苏州市工业园区独墅湖科教创新区仁爱路111号</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user mt-1 mr-3"></i>
+                                <span>Prof. Zhijie Xu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3"></i>
+                                <span data-i18n="email">yushan.pan@ieee.org</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+                <p data-i18n="footer-copyright">&copy; 2023 认知智能与创意计算重点实验室. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/publicationsData.js"></script>
+</body>
+</html> 

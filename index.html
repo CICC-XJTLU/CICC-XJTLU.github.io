@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center for Cognitive Intelligence and Creative Computing</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-semibold text-gray-800 flex items-center">
+                    <span class="inline-block mr-2"><i class="fas fa-microscope text-blue-500"></i></span>
+                    <span data-i18n="lab-name">认知智能与创意计算重点实验室</span>
+                </a>
+                
+                <!-- 桌面导航栏 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link" data-i18n="nav-home">首页</a>
+                    <a href="pages/research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
+                    <a href="pages/team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
+                    <a href="pages/publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="pages/contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
+                    
+                    <!-- GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-3 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
+                    <!-- 移动端GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-2 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
+            <div class="container mx-auto px-4 py-3">
+                <a href="#" class="mobile-nav-link active block py-2" data-i18n="nav-home">首页</a>
+                <a href="pages/research.html" class="mobile-nav-link block py-2" data-i18n="nav-research">研究方向</a>
+                <a href="pages/team.html" class="mobile-nav-link block py-2" data-i18n="nav-team">团队成员</a>
+                <a href="pages/publications.html" class="mobile-nav-link block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="pages/contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 进度条 -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-blue-500 z-50"></div>
+
+    <!-- 英雄区 -->
+    <header class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" 
+                 alt="实验室背景" class="object-cover w-full h-full">
+            <div class="absolute inset-0 bg-black bg-opacity-40 backdrop-filter backdrop-blur-sm"></div>
+        </div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="max-w-3xl text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in" data-i18n="hero-title">
+                    突破人工智能与人机共融的瓶颈
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100 animate-fade-in-delay" data-i18n="hero-subtitle">
+                    我们致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机共融体验。
+                </p>
+                <div class="flex flex-wrap gap-4 animate-fade-in-delay-2">
+                    <a href="pages/research.html" class="btn-primary">
+                        <span data-i18n="btn-learn-more">了解研究方向</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="pages/contact.html" class="btn-secondary">
+                        <span data-i18n="btn-contact">联系我们</span>
+                        <i class="fas fa-envelope ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce">
+            <a href="#overview" class="text-white text-4xl opacity-80 hover:opacity-100 transition-opacity">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- 实验室概览 -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-i18n="overview-title">实验室概览</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <div class="feature-icon bg-blue-50 text-blue-500">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="intelligent-interaction-title">智能交互</h3>
+                    <p class="feature-desc" data-i18n="intelligent-interaction-desc">
+                        研究自然、直观的人机交互方式，结合人工智能技术提升用户体验。
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon bg-green-50 text-green-500">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="cognitive-computing-title">认知计算</h3>
+                    <p class="feature-desc" data-i18n="cognitive-computing-desc">
+                        探索机器学习和认知科学的交叉领域，构建更智能的计算模型。
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon bg-purple-50 text-purple-500">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="ar-title">增强现实</h3>
+                    <p class="feature-desc" data-i18n="ar-desc">
+                        开发AR/VR技术，创造沉浸式交互体验，拓展人机交互的边界。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="pages/research.html" class="btn-outline">
+                    <span data-i18n="view-more">查看更多研究方向</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究亮点 -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-i18n="highlights-title">研究亮点</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" 
+                             alt="智能交互系统" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="highlight-content">
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="highlight-1-title">智能交互系统</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="highlight-1-desc">
+                            我们开发了一套基于多模态输入的智能交互系统，能够理解用户的语音、手势和面部表情，提供自然流畅的交互体验。
+                        </p>
+                        <a href="pages/research.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium">
+                            <span data-i18n="learn-more">了解更多</span>
+                            <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" 
+                             alt="认知辅助技术" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="highlight-content">
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="highlight-2-title">认知辅助技术</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="highlight-2-desc">
+                            我们正在研发针对特殊人群的认知辅助技术，通过AI算法分析用户行为模式，提供个性化的辅助建议。
+                        </p>
+                        <a href="pages/research.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium">
+                            <span data-i18n="learn-more">了解更多</span>
+                            <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新动态 -->
+    <section class="py-20 bg-white" style="display: none;">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-i18n="news-title">最新动态</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- 新闻列表 - 动态加载 -->
+            <div id="news-list" class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+                <!-- 内容将由JavaScript动态加载 -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="load-more-news" class="btn-outline">
+                    <span data-i18n="more-news">查看更多动态</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加入我们 -->
+    <section class="py-20 bg-blue-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full -mt-20 -mr-20 opacity-50"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-100 rounded-full -mb-40 -ml-40 opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="section-title" data-i18n="join-us-title">加入我们</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-lg text-gray-600 mb-8" data-i18n="join-us-desc">
+                    我们始终欢迎对人机交互和人工智能充满热情的优秀人才加入。无论您是研究生、博士生还是博士后，都可以在这里找到施展才华的舞台。
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="pages/team.html" class="btn-primary">
+                        <span data-i18n="view-team">查看团队</span>
+                        <i class="fas fa-users ml-2"></i>
+                    </a>
+                    <a href="pages/contact.html" class="btn-primary">
+                        <span data-i18n="btn-contact">联系我们</span>
+                        <i class="fas fa-envelope ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">认知智能与创意计算重点实验室</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="lab-footer-desc">
+                        致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机共融体验。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="quick-links">快速链接</h3>
+                        <div class="flex flex-wrap -mx-2">
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-home">首页</a>
+                            <a href="pages/research.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-research">研究方向</a>
+                            <a href="pages/team.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-team">团队成员</a>
+                            <a href="pages/publications.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-publications">科研成果</a>
+                            <a href="pages/contact.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-contact">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="contact-info">联系方式</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                                <span data-i18n="address">苏州市工业园区独墅湖科教创新区仁爱路111号</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user mt-1 mr-3"></i>
+                                <span>Prof. Zhijie Xu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3"></i>
+                                <span data-i18n="email">yushan.pan@ieee.org</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+                <p data-i18n="footer-copyright">&copy; 2023 认知智能与创意计算重点实验室. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/newsData.js"></script>
+</body>
+</html> 

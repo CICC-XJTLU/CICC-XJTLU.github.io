@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center for Cognitive Intelligence and Creative Computing</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-xl font-semibold text-gray-800 flex items-center">
+                    <span class="inline-block mr-2"><i class="fas fa-microscope text-blue-500"></i></span>
+                    <span data-i18n="lab-name">认知智能与创意计算重点实验室</span>
+                </a>
+                
+                <!-- 桌面导航栏 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a>
+                    <a href="research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
+                    <a href="team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
+                    <a href="publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="contact.html" class="nav-link active" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
+                    
+                    <!-- GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-3 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
+                    <!-- 移动端GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-2 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
+            <div class="container mx-auto px-4 py-3">
+                <a href="../index.html" class="mobile-nav-link block py-2">首页</a>
+                <a href="research.html" class="mobile-nav-link block py-2">研究方向</a>
+                <a href="team.html" class="mobile-nav-link block py-2">团队成员</a>
+                <a href="publications.html" class="mobile-nav-link block py-2">科研成果</a>
+                <a href="contact.html" class="mobile-nav-link active block py-2">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 进度条 -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-blue-500 z-50"></div>
+
+    <!-- 页面标题 -->
+    <header class="pt-24 pb-12 bg-gradient-to-r from-blue-500 to-blue-600">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="contact-page-title">联系我们</h1>
+                <p class="text-xl text-blue-100" data-i18n="contact-page-subtitle">欢迎与我们交流合作</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 联系信息 -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- 地址 -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-blue-50 text-blue-500">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="contact-title" data-i18n="lab-address-title">实验室地址</h3>
+                    <p class="contact-info" data-i18n="lab-address-info">
+                        苏州市工业园区独墅湖科教创新区仁爱路111号
+                    </p>
+                    <a href="#map" class="contact-link" data-i18n="view-map">
+                        查看地图 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- 邮箱 -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-green-50 text-green-500">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-title" data-i18n="contact-info-title">联系方式</h3>
+                    <p class="contact-info" data-i18n="contact-info-details">
+                        联系人：Prof. Zhijie Xu
+                        邮箱：yushan.pan@ieee.org
+                    </p>
+                    <a href="mailto:yushan.pan@ieee.org" class="contact-link" data-i18n="send-email">
+                        发送邮件 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- 社交媒体 -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-purple-50 text-purple-500">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="contact-title" data-i18n="social-media-title">社交媒体</h3>
+                    <div class="flex justify-center mb-4">
+                        <a href="https://github.com" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <a href="https://github.com" class="contact-link" data-i18n="follow-us">
+                        关注我们 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 地图 -->
+            <div id="map" class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.8959088629654!2d120.7401463844304!3d31.274903457494694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b3a659fdb8d9c7%3A0xc8f5a14100729140!2z6LWr54mp6aOO5LqM5Lyf5bel56iL5a2m6Zmi!5e0!3m2!1szh-CN!2scn!4v1699087137112!5m2!1szh-CN!2scn" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 添加FAQ的CSS样式 -->
+    <style>
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: left;
+            color: #1f2937;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: #f9fafb;
+        }
+        
+        .faq-answer {
+            padding: 1rem 1.5rem;
+            background-color: #f9fafb;
+            border-radius: 0 0 0.5rem 0.5rem;
+            margin-top: -0.25rem;
+            display: block;
+        }
+    </style>
+
+    <!-- 常见问题 -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="section-title" data-i18n="faq-title">常见问题</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-6">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span data-i18n="faq-1-question">如何申请加入实验室？</span>
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-1-answer">
+                                我们欢迎优秀的学生加入实验室。申请流程如下：
+                            </p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li data-i18n="faq-1-item-1">准备个人简历和研究计划</li>
+                                <li data-i18n="faq-1-item-2">发送申请材料至实验室邮箱</li>
+                                <li data-i18n="faq-1-item-3">等待面试通知</li>
+                                <li data-i18n="faq-1-item-4">参加面试并等待结果</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span data-i18n="faq-2-question">实验室是否提供实习机会？</span>
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-2-answer">
+                                是的，我们定期招收实习生。实习生可以参与实验室的研究项目，
+                                获得实践经验。具体实习机会请关注实验室官网或社交媒体的通知。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span data-i18n="faq-3-question">如何与实验室开展合作？</span>
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq-3-answer">
+                                我们欢迎与企业、高校和研究机构开展合作。您可以通过以下方式与我们联系：
+                            </p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li data-i18n="faq-3-item-1">发送合作意向邮件</li>
+                                <li data-i18n="faq-3-item-2">填写网站联系表单</li>
+                                <li data-i18n="faq-3-item-3">直接联系实验室负责人</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">认知智能与创意计算重点实验室</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="lab-footer-desc">
+                        致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="quick-links">快速链接</h3>
+                        <div class="flex flex-wrap -mx-2">
+                            <a href="../index.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-home">首页</a>
+                            <a href="research.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-research">研究方向</a>
+                            <a href="team.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-team">团队成员</a>
+                            <a href="publications.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-publications">科研成果</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-contact">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="contact-info">联系方式</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                                <span data-i18n="address">苏州市工业园区独墅湖科教创新区仁爱路111号</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user mt-1 mr-3"></i>
+                                <span>Prof. Zhijie Xu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3"></i>
+                                <span data-i18n="email">yushan.pan@ieee.org</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+                <p data-i18n="footer-copyright">&copy; 2023 认知智能与创意计算重点实验室. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/language.js"></script>
+    <script>
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const faqAnswer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('i');
+            
+            // 切换显示/隐藏
+            if (faqAnswer.style.display === 'none') {
+                faqAnswer.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                faqAnswer.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // 页面加载时初始化FAQ
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const faqAnswer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-question i');
+                
+                // 设置初始状态为展开
+                faqAnswer.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            });
+        });
+        
+        // 监听语言变化事件，确保FAQ内容也随语言切换而更新
+        document.addEventListener('languageChanged', function(event) {
+            // 语言变化时重新应用翻译
+            updateContent();
+        });
+    </script>
+</body>
+</html> 

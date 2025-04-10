@@ -13,7 +13,7 @@ let currentYear = 'all'; // 当前选中的年份
 function initPublicationsData() {
     try {
         // 从API获取数据
-        fetch('http://114.132.235.134:8088/publications', {
+        fetch('https://wl778.cc/publications', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

@@ -176,6 +176,13 @@ function initResearchData() {
                     "name_en": "Max Planck Institute",
                     "logo": "../imgs/max planck.png",
                     "url": "#"
+                },
+                {
+                    "id": 12,
+                    "name": "英国国家计算机动画中心",
+                    "name_en": "National Centre for Computer Animation",
+                    "logo": "../imgs/英国国家计算机动画中心.png",
+                    "url": "#"
                 }
             ]
         };

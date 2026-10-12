@@ -64,7 +64,7 @@ const translations = {
         'newsletter': '订阅最新动态',
         'newsletter-desc': '订阅我们的通讯，获取实验室最新动态和研究成果。',
         'email-placeholder': '您的邮箱地址',
-        'copyright': '© 2023 HCI-AI Lab. 保留所有权利。',
+        'copyright': '© 2023 苏州工业园区情感计算与互动健康交叉创新（科研）平台. 保留所有权利。',
         
         // 语言切换
         'switch-lang': '切换语言',
@@ -241,14 +241,14 @@ const translations = {
         'contact-us-btn': '联系我们',
         
         // 底部菜单新增
-        'lab-name': '认知智能与创意计算研究中心',
+        'lab-name': '苏州工业园区情感计算与互动健康交叉创新（科研）平台',
         'lab-footer-desc': '致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机共融体验。',
         'footer-links': '快速链接',
         'footer-contact': '联系方式',
         'footer-newsletter': '订阅最新动态',
         'footer-newsletter-desc': '订阅我们的通讯，获取实验室最新动态和研究成果。',
         'footer-email-placeholder': '您的邮箱地址',
-        'footer-copyright': '© 2023 认知智能与创意计算研究中心. 保留所有权利.',
+        'footer-copyright': '© 2023 苏州工业园区情感计算与互动健康交叉创新（科研）平台. 保留所有权利.',
 
         // 科研成果页面
         'publications-page-title': '科研成果',
@@ -423,7 +423,7 @@ const translations = {
         'newsletter': 'Newsletter',
         'newsletter-desc': 'Subscribe to our newsletter to receive the latest updates and research results from our lab.',
         'email-placeholder': 'Your email address',
-        'copyright': '© 2023 HCI-AI Lab. All rights reserved.',
+        'copyright': '© 2023 Suzhou Industrial Park Affective Computing & Interactive Health Interdisciplinary Innovation (Research) Platform. All rights reserved.',
         
         // Language Switch
         'switch-lang': 'Switch Language',
@@ -601,14 +601,14 @@ const translations = {
         'contact-us-btn': 'Contact Us',
         
         // Footer Menu Additions
-        'lab-name': 'Center for Cognitive Intelligence and Creative Computing',
+        'lab-name': 'Suzhou Industrial Park Affective Computing & Interactive Health Interdisciplinary Innovation (Research) Platform',
         'lab-footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural human-machine harmony experiences.',
         'footer-links': 'Quick Links',
         'footer-contact': 'Contact Information',
         'footer-newsletter': 'Newsletter',
         'footer-newsletter-desc': 'Subscribe to our newsletter to receive the latest updates and research results from our lab.',
         'footer-email-placeholder': 'Your email address',
-        'footer-copyright': '© 2023 Center for Cognitive Intelligence and Creative Computing. All Rights Reserved.',
+        'footer-copyright': '© 2023 Suzhou Industrial Park Affective Computing & Interactive Health Interdisciplinary Innovation (Research) Platform. All Rights Reserved.',
 
         // Publications Page
         'publications-page-title': 'Publications',

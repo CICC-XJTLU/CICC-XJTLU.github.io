@@ -893,3 +893,26 @@
     background-color: #2563eb;
     color: white;
 } 
+/* Full platform names remain readable in both languages. */
+nav > .container > .flex { gap: 1rem; }
+nav > .container > .flex > a:first-child {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: clamp(0.875rem, 1.4vw, 1.125rem);
+    line-height: 1.4;
+}
+nav [data-i18n="lab-name"] { overflow-wrap: anywhere; }
+nav > .container > .flex > a:first-child > span:first-child,
+nav > .container > .flex > div { flex-shrink: 0; }
+nav .nav-link,
+nav button { white-space: nowrap; }
+body > header.pt-24 { padding-top: calc(var(--site-nav-height, 6rem) + 2rem); }
+@media (min-width: 768px) and (max-width: 1279px) {
+    nav > .container > .flex { flex-wrap: wrap; }
+    nav > .container > .flex > a:first-child { flex-basis: 100%; }
+    nav > .container > .flex > .md\:flex {
+        width: 100%;
+        justify-content: space-between;
+    }
+    nav > .container > .flex > .space-x-8 > * + * { margin-left: 0.75rem; }
+}

@@ -1,5 +1,19 @@
 // 等待DOM加载完成
 document.addEventListener('DOMContentLoaded', () => {
+    // Keep page headings below the full bilingual platform name.
+    const navigation = document.querySelector('body > nav');
+    if (navigation) {
+        const syncNavigationHeight = () => document.documentElement.style.setProperty(
+            '--site-nav-height', `${Math.ceil(navigation.getBoundingClientRect().height)}px`
+        );
+        syncNavigationHeight();
+        if ('ResizeObserver' in window) {
+            new ResizeObserver(syncNavigationHeight).observe(navigation);
+        }
+        window.addEventListener('resize', syncNavigationHeight);
+        document.addEventListener('languageChanged', syncNavigationHeight);
+    }
+
     // 移动端菜单切换
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');

@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily scholarly metadata refresh at 08:00 China time
+
+[Timer]
+OnCalendar=*-*-* 08:00:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=cicc-platform-update.service
+
+[Install]
+WantedBy=timers.target

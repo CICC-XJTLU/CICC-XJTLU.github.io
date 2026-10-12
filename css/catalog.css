@@ -1,0 +1,42 @@
+/* Publication catalogue and research news, extending the shared site styles. */
+[hidden] { display: none !important; }
+.catalog-shell { max-width: 1200px; }
+.catalog-toolbar { display: grid; grid-template-columns: minmax(0, 2fr) minmax(130px, 1fr) minmax(160px, 1fr); gap: 1rem; margin-bottom: 1rem; }
+.catalog-field { display: flex; flex-direction: column; gap: .4rem; color: #374151; font-size: .9rem; font-weight: 600; }
+.catalog-field input, .catalog-field select { width: 100%; min-width: 0; padding: .7rem .9rem; background: white; border: 1px solid #cbd5e1; border-radius: .4rem; color: #1f2937; font: inherit; font-weight: 400; }
+.catalog-field input:focus, .catalog-field select:focus { outline: 2px solid #2563eb; outline-offset: 2px; }
+.catalog-summary { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; color: #64748b; font-size: .9rem; margin: 1rem 0 2rem; }
+.catalog-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.catalog-stat-value { color: #2563eb; font-size: 2rem; font-weight: 700; }
+.catalog-stat-label { color: #64748b; margin-top: .25rem; }
+.publication-content { min-width: 0; }
+.publication-title, .publication-authors, .catalog-members, .publication-journal { overflow-wrap: anywhere; }
+.publication-title { line-height: 1.5; }
+.publication-tags, .publication-links { flex-wrap: wrap; }
+.publication-links { row-gap: .5rem; }
+.catalog-members { font-size: .88rem; line-height: 1.7; color: #475569; margin-bottom: .9rem; }
+.catalog-members-label { font-weight: 600; }
+.catalog-collaboration { display: inline-block; margin-left: .65rem; border: 1px solid #bfdbfe; padding: 0 .5rem; border-radius: .2rem; font-size: .76rem; color: #1d4ed8; }
+.catalog-type { color: #475569; background: #f1f5f9; }
+.catalog-date { color: #64748b; font-size: .85rem; }
+.catalog-empty { grid-column: 1 / -1; padding: 2rem 1rem; text-align: center; color: #64748b; background: #f8fafc; border: 1px solid #e2e8f0; }
+.catalog-other-card { background: white; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: .5rem; }
+.catalog-news-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.catalog-news-card { min-width: 0; display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid #dbe3ee; border-top: 3px solid #2563eb; background: #fff; border-radius: .4rem; }
+.catalog-news-date { display: block; color: #2563eb; font-size: .85rem; font-weight: 600; font-variant-numeric: tabular-nums; margin-bottom: .8rem; }
+.catalog-news-title { color: #1f2937; font-size: 1.1rem; line-height: 1.55; font-weight: 600; overflow-wrap: anywhere; margin-bottom: .75rem; }
+.catalog-news-description { color: #64748b; line-height: 1.65; font-size: .92rem; margin-bottom: 1rem; overflow-wrap: anywhere; }
+.catalog-news-card > .publication-link { margin-top: auto; padding-top: .5rem; font-size: .9rem; }
+.catalog-news-actions { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.catalog-subtitle { max-width: 48rem; margin: 0 auto; line-height: 1.7; }
+@media (max-width: 1023px) { .catalog-news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) {
+    .catalog-toolbar, .catalog-news-grid { grid-template-columns: 1fr; }
+    .catalog-stats { gap: .5rem; }
+    .catalog-stat-value { font-size: 1.65rem; }
+    .catalog-stat-label { font-size: .8rem; }
+    .publication-card { flex-direction: column; }
+    .publication-year { width: auto; justify-content: flex-start; padding: .5rem 1rem; font-size: .95rem; }
+    .publication-content { padding: 1rem; }
+    .publication-title { font-size: 1.05rem; }
+}

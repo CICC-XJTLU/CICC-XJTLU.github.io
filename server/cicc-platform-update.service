@@ -1,0 +1,19 @@
+[Unit]
+Description=Refresh CICC platform publications and News
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/cicc-platform/site
+ExecStart=/bin/bash /home/ubuntu/cicc-platform/site/server/run_daily.sh
+TimeoutStartSec=45min
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/cicc-platform
+UMask=0077
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzhou Industrial Park Affective Computing & Interactive Health Interdisciplinary Innovation (Research) Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/catalog.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-xl font-semibold text-gray-800 flex items-center">
+                    <span class="inline-block mr-2"><i class="fas fa-microscope text-blue-500"></i></span>
+                    <span data-i18n="lab-name">苏州工业园区情感计算与互动健康交叉创新（科研）平台</span>
+                </a>
+                
+                <!-- 桌面导航栏 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a>
+                    <a href="research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
+                    <a href="team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
+                    <a href="publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="news.html" class="nav-link active">News</a>
+                    <a href="contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
+                    
+                    <!-- GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-3 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
+                    <!-- 移动端GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-2 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
+            <div class="container mx-auto px-4 py-3">
+                <a href="../index.html" class="mobile-nav-link block py-2" data-i18n="nav-home">首页</a>
+                <a href="research.html" class="mobile-nav-link block py-2" data-i18n="nav-research">研究方向</a>
+                <a href="team.html" class="mobile-nav-link block py-2" data-i18n="nav-team">团队成员</a>
+                <a href="publications.html" class="mobile-nav-link block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="news.html" class="mobile-nav-link active block py-2">News</a>
+                <a href="contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 进度条 -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-blue-500 z-50"></div>
+
+    <header class="pt-24 pb-12 bg-gradient-to-r from-blue-500 to-blue-600">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" data-news-zh="News · 科研动态" data-news-en="News">News · 科研动态</h1>
+            <p class="text-xl text-blue-100 catalog-subtitle" data-news-zh="最近三个月的研究成果，按原始发表日期呈现" data-news-en="Research from the last three months, ordered by original publication date">最近三个月的研究成果，按原始发表日期呈现</p>
+        </div>
+    </header>
+    <main class="py-16">
+        <div class="container catalog-shell mx-auto px-4">
+            <div class="catalog-summary"><p id="news-window"></p><p id="news-updated"></p></div>
+            <div id="news-list" class="catalog-news-grid"><p class="catalog-empty" data-news-zh="正在加载科研动态…" data-news-en="Loading research news…">正在加载科研动态…</p></div>
+            <div class="catalog-news-actions"><button id="load-more-news" class="btn-outline" hidden data-news-zh="加载更多" data-news-en="Load more">加载更多</button><a href="publications.html" class="btn-outline" data-news-zh="全部科研成果" data-news-en="All publications">全部科研成果</a></div>
+            <noscript><p class="catalog-empty">请启用 JavaScript 查看动态。Enable JavaScript to view research news.</p></noscript>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">苏州工业园区情感计算与互动健康交叉创新（科研）平台</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="lab-footer-desc">
+                        致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="quick-links">快速链接</h3>
+                        <div class="flex flex-wrap -mx-2">
+                            <a href="../index.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-home">首页</a>
+                            <a href="research.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-research">研究方向</a>
+                            <a href="team.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-team">团队成员</a>
+                            <a href="publications.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-publications">科研成果</a>
+                            <a href="news.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4">News</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-contact">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="contact-info">联系方式</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                                <span data-i18n="address">苏州市工业园区独墅湖科教创新区仁爱路111号</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user mt-1 mr-3"></i>
+                                <span>Prof. Zhijie Xu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3"></i>
+                                <span data-i18n="email">yushan.pan@ieee.org</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
+                <p data-i18n="footer-copyright">&copy; 2026 苏州工业园区情感计算与互动健康交叉创新（科研）平台. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/newsData.js"></script>
+</body>
+</html> 

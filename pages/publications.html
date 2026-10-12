@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/catalog.css">
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
     <!-- 导航栏 -->
@@ -24,6 +25,7 @@
                     <a href="research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
                     <a href="team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
                     <a href="publications.html" class="nav-link active" data-i18n="nav-publications">科研成果</a>
+                    <a href="news.html" class="nav-link">News</a>
                     <a href="contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
                     
                     <!-- 语言切换按钮 -->
@@ -64,6 +66,7 @@
                 <a href="research.html" class="mobile-nav-link block py-2" data-i18n="nav-research">研究方向</a>
                 <a href="team.html" class="mobile-nav-link block py-2" data-i18n="nav-team">团队成员</a>
                 <a href="publications.html" class="mobile-nav-link active block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="news.html" class="mobile-nav-link block py-2">News</a>
                 <a href="contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
             </div>
         </div>
@@ -77,149 +80,37 @@
         <div class="container mx-auto px-4">
             <div class="text-center text-white">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="publications-page-title">科研成果</h1>
-                <p class="text-xl text-blue-100" data-i18n="publications-page-subtitle">展示我们在人机交互与人工智能领域的最新研究成果</p>
+                <p class="text-xl text-blue-100" data-catalog-zh="团队学术论文与研究成果" data-catalog-en="Publications and research contributions from our team">团队学术论文与研究成果</p>
             </div>
         </div>
     </header>
 
-    <!-- 成果统计 -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-500 mb-2">50+</div>
-                    <div class="text-gray-600" data-i18n="papers-count">论文发表</div>
+    <main>
+        <section class="py-10 bg-white" aria-label="Publication statistics">
+            <div class="container catalog-shell mx-auto px-4 catalog-stats text-center">
+                <div><div id="papers-total" class="catalog-stat-value">—</div><div class="catalog-stat-label" data-catalog-zh="学术成果" data-catalog-en="Publications">学术成果</div></div>
+                <div><div id="collaborations-total" class="catalog-stat-value">—</div><div class="catalog-stat-label" data-catalog-zh="团队共同作者论文" data-catalog-en="Team co-authored papers">团队共同作者论文</div></div>
+                <div><div id="years-total" class="catalog-stat-value">—</div><div class="catalog-stat-label" data-catalog-zh="发表年份" data-catalog-en="Publication years">发表年份</div></div>
+            </div>
+        </section>
+        <section class="py-16" aria-labelledby="catalog-heading">
+            <div class="container catalog-shell mx-auto px-4">
+                <div class="text-center mb-10"><h2 id="catalog-heading" class="section-title" data-i18n="publications-title">论文发表</h2><div class="section-divider"></div></div>
+                <div class="catalog-toolbar">
+                    <label class="catalog-field" for="paper-search"><span data-catalog-zh="搜索" data-catalog-en="Search">搜索</span><input id="paper-search" type="search" autocomplete="off" placeholder="搜索论文标题或作者" data-catalog-zh="搜索论文标题或作者" data-catalog-en="Search titles or authors"></label>
+                    <label class="catalog-field" for="paper-year"><span data-catalog-zh="发表年份" data-catalog-en="Year">发表年份</span><select id="paper-year"><option value="all">全部</option></select></label>
+                    <label class="catalog-field" for="paper-type"><span data-catalog-zh="成果类型" data-catalog-en="Publication type">成果类型</span><select id="paper-type"><option value="all">全部</option></select></label>
                 </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-500 mb-2">20+</div>
-                    <div class="text-gray-600" data-i18n="patents-count">专利授权</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-500 mb-2">10+</div>
-                    <div class="text-gray-600" data-i18n="projects-count">科研项目</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-500 mb-2">5+</div>
-                    <div class="text-gray-600" data-i18n="tech-transfer-count">技术转化</div>
-                </div>
+                <div class="catalog-summary"><p id="catalog-results" role="status" aria-live="polite"></p><p id="catalog-status"></p></div>
+                <div id="papers-list" class="space-y-6"><p class="catalog-empty" data-catalog-zh="正在加载成果目录…" data-catalog-en="Loading publications…">正在加载成果目录…</p></div>
+                <div class="text-center mt-10"><button id="load-more-papers" class="btn-outline" hidden data-catalog-zh="加载更多" data-catalog-en="Load more">加载更多</button></div>
+                <noscript><p class="catalog-empty">请启用 JavaScript 查看可检索的成果目录。Enable JavaScript to browse the publication catalogue.</p></noscript>
             </div>
-        </div>
-    </section>
-
-    <!-- 论文发表 -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title" data-i18n="publications-title">论文发表</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <!-- 筛选选项 -->
-            <div class="mb-12">
-                <!-- 年份筛选 -->
-                <div class="flex flex-wrap justify-center gap-4 mb-6">
-                    <span class="text-gray-700 font-medium my-auto mr-2" data-i18n="filter-by-year">按年份筛选：</span>
-                    <button class="year-filter-btn active" data-year="all" data-i18n="filter-all">全部</button>
-                    <button class="year-filter-btn" data-year="2025">2025</button>
-                    <button class="year-filter-btn" data-year="2024">2024</button>
-                    <button class="year-filter-btn" data-year="2023">2023</button>
-                    <button class="year-filter-btn" data-year="earlier" data-i18n="filter-earlier">更早</button>
-                </div>
-                
-                <!-- 论文类型筛选 -->
-                <div class="flex flex-wrap justify-center gap-4">
-                    <span class="text-gray-700 font-medium my-auto mr-2" data-i18n="filter-by-type">按类型筛选：</span>
-                    <button class="type-filter-btn active" data-type="all" data-i18n="filter-all">全部</button>
-                    <button class="type-filter-btn" data-type="nlp" data-i18n="filter-type-nlp">NLP</button>
-                    <button class="type-filter-btn" data-type="大模型" data-i18n="filter-type-llm">大模型</button>
-                    <button class="type-filter-btn" data-type="软件工程" data-i18n="filter-type-se">软件工程</button>
-                    <button class="type-filter-btn" data-type="hcai" data-i18n="filter-type-hcai">HCAI</button>
-                    <button class="type-filter-btn" data-type="3d重建" data-i18n="filter-type-3d">3D重建</button>
-                </div>
-            </div>
-
-            <!-- 论文列表 - 动态加载 -->
-            <div id="papers-list" class="space-y-8">
-                <!-- 内容将由JavaScript动态加载 -->
-            </div>
-
-            <!-- 加载更多按钮 -->
-            <div class="text-center mt-12">
-                <button id="load-more-papers" class="btn-outline" data-i18n="load-more">
-                    加载更多
-                    <i class="fas fa-chevron-down ml-2"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 专利与获奖 -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title" data-i18n="patents-awards-title">专利与获奖</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- 专利列表 - 动态加载 -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-6" data-i18n="patents-title">发明专利</h3>
-                    <div id="patents-list" class="space-y-6">
-                        <!-- 内容将由JavaScript动态加载 -->
-                    </div>
-                    <!-- 加载更多按钮 -->
-                    <div class="text-center mt-8">
-                        <button id="load-more-patents" class="btn-outline" data-i18n="load-more">
-                            加载更多
-                            <i class="fas fa-chevron-down ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 获奖列表 - 动态加载 -->
-                <div>
-                    <h3 class="text-2xl font-bold mb-6" data-i18n="awards-title">获奖情况</h3>
-                    <div id="awards-list" class="space-y-6">
-                        <!-- 内容将由JavaScript动态加载 -->
-                    </div>
-                    <!-- 加载更多按钮 -->
-                    <div class="text-center mt-8">
-                        <button id="load-more-awards" class="btn-outline" data-i18n="load-more">
-                            加载更多
-                            <i class="fas fa-chevron-down ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 技术转化 -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="section-title" data-i18n="tech-transfer-title">技术转化</h2>
-                <div class="section-divider"></div>
-                <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12" data-i18n="tech-transfer-subtitle">
-                    我们致力于将研究成果转化为实际应用，为产业发展提供技术支持。
-                </p>
-            </div>
-
-            <!-- 技术转化列表 - 动态加载 -->
-            <div id="transfers-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 内容将由JavaScript动态加载 -->
-            </div>
-
-            <!-- 加载更多按钮 -->
-            <div class="text-center mt-12">
-                <button id="load-more-transfers" class="btn-outline" data-i18n="load-more">
-                    加载更多
-                    <i class="fas fa-chevron-down ml-2"></i>
-                </button>
-            </div>
-        </div>
-    </section>
+        </section>
+        <section id="patents-section" class="py-12 bg-white" hidden><div class="container catalog-shell mx-auto px-4"><h2 class="section-title mb-8" data-i18n="patents-title">发明专利</h2><div id="patents-list" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></section>
+        <section id="awards-section" class="py-12 bg-gray-100" hidden><div class="container catalog-shell mx-auto px-4"><h2 class="section-title mb-8" data-i18n="awards-title">获奖情况</h2><div id="awards-list" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></section>
+        <section id="transfers-section" class="py-12 bg-white" hidden><div class="container catalog-shell mx-auto px-4"><h2 class="section-title mb-8" data-i18n="tech-transfer-title">技术转化</h2><div id="transfers-list" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div></div></section>
+    </main>
 
     <!-- 页脚 -->
     <footer class="bg-gray-800 text-white py-12">
@@ -245,6 +136,7 @@
                             <a href="research.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-research">研究方向</a>
                             <a href="team.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-team">团队成员</a>
                             <a href="publications.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-publications">科研成果</a>
+                            <a href="news.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4">News</a>
                             <a href="contact.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-contact">联系我们</a>
                         </div>
                     </div>

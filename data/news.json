@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "id": "839662d83374bb34",
+      "date": "2026-10-08",
+      "date_precision": "day",
+      "title": "Nurturing respect: crafting robot responses to inspire positive interactions",
+      "title_en": "Nurturing respect: crafting robot responses to inspire positive interactions",
+      "desc": "潘昱杉的研究成果发表于 CCF Transactions on Pervasive Computing and Interaction。",
+      "desc_en": "Research by Yushan Pan, published in CCF Transactions on Pervasive Computing and Interaction.",
+      "link": "https://doi.org/10.1007/s42486-026-00251-1",
+      "members": [
+        "Yushan Pan"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1007/s42486-026-00251-1"
+    },
+    {
+      "id": "166286950751d77b",
+      "date": "2026-10-06",
+      "date_precision": "day",
+      "title": "SE-Former: Skeleton-Enhanced Learning Framework for 3D Human Motion Prediction",
+      "title_en": "SE-Former: Skeleton-Enhanced Learning Framework for 3D Human Motion Prediction",
+      "desc": "潘昱杉的研究成果发表于 ACM Transactions on Intelligent Systems and Technology。",
+      "desc_en": "Research by Yushan Pan, published in ACM Transactions on Intelligent Systems and Technology.",
+      "link": "https://doi.org/10.1145/3856803",
+      "members": [
+        "Yushan Pan"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1145/3856803"
+    },
+    {
+      "id": "cdab7af27c5c98a1",
+      "date": "2026-10-03",
+      "date_precision": "day",
+      "title": "CLARiF: clue alignment and retrieval-informed fusion for fine-grained pest recognition",
+      "title_en": "CLARiF: clue alignment and retrieval-informed fusion for fine-grained pest recognition",
+      "desc": "张海洋、项南、黎秋宇、潘昱杉、许志杰的研究成果发表于 Applied Intelligence。",
+      "desc_en": "Research by Haiyang Zhang, Nan Xiang, Qiuyu Li, Yushan Pan, Zhijie Xu, published in Applied Intelligence.",
+      "link": "https://doi.org/10.1007/s10489-026-07522-5",
+      "members": [
+        "Haiyang Zhang",
+        "Nan Xiang",
+        "Qiuyu Li",
+        "Yushan Pan",
+        "Zhijie Xu"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1007/s10489-026-07522-5"
+    },
+    {
+      "id": "4be57ea804ea080f",
+      "date": "2026-09-11",
+      "date_precision": "day",
+      "title": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
+      "title_en": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
+      "desc": "潘昱杉的研究成果发表于 ACM Transactions on Embedded Computing Systems。",
+      "desc_en": "Research by Yushan Pan, published in ACM Transactions on Embedded Computing Systems.",
+      "link": "https://doi.org/10.1145/3847669",
+      "members": [
+        "Yushan Pan"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1145/3847669"
+    },
+    {
+      "id": "f1d963848d984401",
+      "date": "2026-08-03",
+      "date_precision": "day",
+      "title": "Beyond shortcuts: Mitigating spurious correlations in radiological diagnosis with causal intervention",
+      "title_en": "Beyond shortcuts: Mitigating spurious correlations in radiological diagnosis with causal intervention",
+      "desc": "张海洋的研究成果发表于 Knowledge-Based Systems。",
+      "desc_en": "Research by Haiyang Zhang, published in Knowledge-Based Systems.",
+      "link": "https://doi.org/10.1016/j.knosys.2026.116375",
+      "members": [
+        "Haiyang Zhang"
+      ],
+      "date_source": "XJTLU research portal publication status Published - 3 Aug 2026; Crossref corroborates August 2026",
+      "doi": "10.1016/j.knosys.2026.116375"
+    },
+    {
+      "id": "4c87d241bbd82c92",
+      "date": "2026-08",
+      "date_precision": "month",
+      "title": "Multimodal Motion Tracking: A Review",
+      "title_en": "Multimodal Motion Tracking: A Review",
+      "desc": "许志杰的研究成果发表于 IEEE Sensors Journal。",
+      "desc_en": "Research by Zhijie Xu, published in IEEE Sensors Journal.",
+      "link": "https://doi.org/10.1109/jsen.2026.3701620",
+      "members": [
+        "Zhijie Xu"
+      ],
+      "date_source": "Crossref published-print",
+      "doi": "10.1109/jsen.2026.3701620"
+    },
+    {
+      "id": "be6d642e753dc47c",
+      "date": "2026-08",
+      "date_precision": "month",
+      "title": "Mamba-Guided Diffusion for Prediction-Based Industrial Video Anomaly Detection",
+      "title_en": "Mamba-Guided Diffusion for Prediction-Based Industrial Video Anomaly Detection",
+      "desc": "王懿鸿、潘昱杉、许志杰的研究成果发表于 2026 31st International Conference on Automation and Computing (ICAC)。",
+      "desc_en": "Research by Yihong Wang, Yushan Pan, Zhijie Xu, published in 2026 31st International Conference on Automation and Computing (ICAC).",
+      "link": "https://doi.org/10.1109/icac70325.2026.11712289",
+      "members": [
+        "Yihong Wang",
+        "Yushan Pan",
+        "Zhijie Xu"
+      ],
+      "date_source": "Crossref published",
+      "doi": "10.1109/icac70325.2026.11712289"
+    },
+    {
+      "id": "9e0c37aed1bedbcd",
+      "date": "2026-08",
+      "date_precision": "month",
+      "title": "Characteristics of Gaming Behavior Among China’s Middle-aged and Older Population",
+      "title_en": "Characteristics of Gaming Behavior Among China’s Middle-aged and Older Population",
+      "desc": "项南、陈扬斌、王懿鸿、许志杰的研究成果发表于 2026 31st International Conference on Automation and Computing (ICAC)。",
+      "desc_en": "Research by Nan Xiang, Yangbin Chen, Yihong Wang, Zhijie Xu, published in 2026 31st International Conference on Automation and Computing (ICAC).",
+      "link": "https://doi.org/10.1109/icac70325.2026.11712445",
+      "members": [
+        "Nan Xiang",
+        "Yangbin Chen",
+        "Yihong Wang",
+        "Zhijie Xu"
+      ],
+      "date_source": "Crossref published",
+      "doi": "10.1109/icac70325.2026.11712445"
+    },
+    {
+      "id": "2e55895d4cae957c",
+      "date": "2026-07-21",
+      "date_precision": "day",
+      "title": "Aletheia: A Two-Stage Graph-Based Framework for Hallucination Detection in Abstractive Summarization",
+      "title_en": "Aletheia: A Two-Stage Graph-Based Framework for Hallucination Detection in Abstractive Summarization",
+      "desc": "张海洋的研究成果发表于 Lecture Notes in Computer Science。",
+      "desc_en": "Research by Haiyang Zhang, published in Lecture Notes in Computer Science.",
+      "link": "https://doi.org/10.1007/978-981-92-3426-4_47",
+      "members": [
+        "Haiyang Zhang"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1007/978-981-92-3426-4_47"
+    }
+  ],
+  "meta": {
+    "window_start": "2026-07-12",
+    "window_end": "2026-10-12",
+    "updated_at": "2026-10-12"
+  }
+}

@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
     <!-- 导航栏 -->
@@ -24,6 +25,7 @@
                     <a href="pages/research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
                     <a href="pages/team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
                     <a href="pages/publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="pages/news.html" class="nav-link">News</a>
                     <a href="pages/contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
                     
                     <!-- 语言切换按钮 -->
@@ -64,6 +66,7 @@
                 <a href="pages/research.html" class="mobile-nav-link block py-2" data-i18n="nav-research">研究方向</a>
                 <a href="pages/team.html" class="mobile-nav-link block py-2" data-i18n="nav-team">团队成员</a>
                 <a href="pages/publications.html" class="mobile-nav-link block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="pages/news.html" class="mobile-nav-link block py-2">News</a>
                 <a href="pages/contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
             </div>
         </div>
@@ -202,24 +205,11 @@
     </section>
 
     <!-- 最新动态 -->
-    <section class="py-20 bg-white" style="display: none;">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="section-title" data-i18n="news-title">最新动态</h2>
-                <div class="section-divider"></div>
-            </div>
-            
-            <!-- 新闻列表 - 动态加载 -->
-            <div id="news-list" class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
-                <!-- 内容将由JavaScript动态加载 -->
-            </div>
-            
-            <div class="text-center mt-12">
-                <button id="load-more-news" class="btn-outline">
-                    <span data-i18n="more-news">查看更多动态</span>
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </button>
-            </div>
+    <section id="news" class="py-20 bg-white" aria-labelledby="home-news-heading">
+        <div class="container catalog-shell mx-auto px-4">
+            <div class="text-center mb-10"><h2 id="home-news-heading" class="section-title" data-news-zh="News · 科研动态" data-news-en="News">News · 科研动态</h2><div class="section-divider"></div><p class="text-gray-600 catalog-subtitle" data-news-zh="最近三个月的研究成果，按原始发表日期呈现" data-news-en="Research from the last three months, ordered by original publication date">最近三个月的研究成果，按原始发表日期呈现</p></div>
+            <div id="news-list" class="catalog-news-grid"><p class="catalog-empty" data-news-zh="正在加载科研动态…" data-news-en="Loading research news…">正在加载科研动态…</p></div>
+            <div class="catalog-news-actions"><a href="pages/news.html" class="btn-outline" data-news-zh="查看全部动态 →" data-news-en="View all news →">查看全部动态 →</a></div>
         </div>
     </section>
 
@@ -273,6 +263,7 @@
                             <a href="pages/research.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-research">研究方向</a>
                             <a href="pages/team.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-team">团队成员</a>
                             <a href="pages/publications.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-publications">科研成果</a>
+                            <a href="pages/news.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4">News</a>
                             <a href="pages/contact.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-contact">联系我们</a>
                         </div>
                     </div>

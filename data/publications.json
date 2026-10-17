@@ -13528,7 +13528,7 @@
   "awards": [],
   "transfers": [],
   "meta": {
-    "updated_at": "2026-10-16",
+    "updated_at": "2026-10-17",
     "paper_count": 381,
     "member_count": 14,
     "sources": [
@@ -13539,8 +13539,8 @@
     ],
     "coverage": {
       "mode": "daily",
-      "source_successes": 11,
-      "source_error_count": 1,
+      "source_successes": 12,
+      "source_error_count": 0,
       "pending_metadata_count": 0
     }
   }

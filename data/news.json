@@ -128,26 +128,11 @@
       ],
       "date_source": "Crossref published",
       "doi": "10.1109/icac70325.2026.11712445"
-    },
-    {
-      "id": "2e55895d4cae957c",
-      "date": "2026-07-21",
-      "date_precision": "day",
-      "title": "Aletheia: A Two-Stage Graph-Based Framework for Hallucination Detection in Abstractive Summarization",
-      "title_en": "Aletheia: A Two-Stage Graph-Based Framework for Hallucination Detection in Abstractive Summarization",
-      "desc": "张海洋的研究成果发表于 Lecture Notes in Computer Science。",
-      "desc_en": "Research by Haiyang Zhang, published in Lecture Notes in Computer Science.",
-      "link": "https://doi.org/10.1007/978-981-92-3426-4_47",
-      "members": [
-        "Haiyang Zhang"
-      ],
-      "date_source": "Crossref published-online",
-      "doi": "10.1007/978-981-92-3426-4_47"
     }
   ],
   "meta": {
-    "window_start": "2026-07-21",
-    "window_end": "2026-10-21",
-    "updated_at": "2026-10-21"
+    "window_start": "2026-07-22",
+    "window_end": "2026-10-22",
+    "updated_at": "2026-10-22"
   }
 }

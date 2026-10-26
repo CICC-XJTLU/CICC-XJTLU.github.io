@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "id": "4be57ea804ea080f",
+      "date": "2026-10-24",
+      "date_precision": "day",
+      "title": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
+      "title_en": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
+      "desc": "潘昱杉的研究成果发表于 ACM Transactions on Embedded Computing Systems。",
+      "desc_en": "Research by Yushan Pan, published in ACM Transactions on Embedded Computing Systems.",
+      "link": "https://doi.org/10.1145/3847669",
+      "members": [
+        "Yushan Pan"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1145/3847669"
+    },
+    {
       "id": "839662d83374bb34",
       "date": "2026-10-08",
       "date_precision": "day",
@@ -48,21 +63,6 @@
       ],
       "date_source": "Crossref published-online",
       "doi": "10.1007/s10489-026-07522-5"
-    },
-    {
-      "id": "4be57ea804ea080f",
-      "date": "2026-09-11",
-      "date_precision": "day",
-      "title": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
-      "title_en": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
-      "desc": "潘昱杉的研究成果发表于 ACM Transactions on Embedded Computing Systems。",
-      "desc_en": "Research by Yushan Pan, published in ACM Transactions on Embedded Computing Systems.",
-      "link": "https://doi.org/10.1145/3847669",
-      "members": [
-        "Yushan Pan"
-      ],
-      "date_source": "Crossref published-online",
-      "doi": "10.1145/3847669"
     },
     {
       "id": "f1d963848d984401",
@@ -131,8 +131,8 @@
     }
   ],
   "meta": {
-    "window_start": "2026-07-25",
-    "window_end": "2026-10-25",
-    "updated_at": "2026-10-25"
+    "window_start": "2026-07-26",
+    "window_end": "2026-10-26",
+    "updated_at": "2026-10-26"
   }
 }

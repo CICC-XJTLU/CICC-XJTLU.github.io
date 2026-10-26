@@ -130,6 +130,40 @@
       ]
     },
     {
+      "id": "4be57ea804ea080f",
+      "title": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
+      "title_en": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
+      "authors": "Zeqi Yu, Heng Zhao, Zuhe Li, Yushan Pan, Xinfei Guo",
+      "authors_en": "Zeqi Yu, Heng Zhao, Zuhe Li, Yushan Pan, Xinfei Guo",
+      "journal": "ACM Transactions on Embedded Computing Systems",
+      "year": 2026,
+      "date": "2026-10-24",
+      "date_precision": "day",
+      "date_source": "Crossref published-online",
+      "type": "journal",
+      "doi": "10.1145/3847669",
+      "news_eligible": true,
+      "date_conflict": false,
+      "member_authors": [
+        "Yushan Pan"
+      ],
+      "member_ids": [
+        "yushan-pan"
+      ],
+      "source_urls": [
+        "https://api.crossref.org/works/10.1145%2F3847669",
+        "https://api.crossref.org/works/10.1145/3847669",
+        "https://doi.org/10.1145/3847669"
+      ],
+      "links": [
+        {
+          "type": "doi",
+          "url": "https://doi.org/10.1145/3847669"
+        }
+      ],
+      "tags": []
+    },
+    {
       "id": "839662d83374bb34",
       "title": "Nurturing respect: crafting robot responses to inspire positive interactions",
       "title_en": "Nurturing respect: crafting robot responses to inspire positive interactions",
@@ -279,40 +313,6 @@
         {
           "type": "doi",
           "url": "https://doi.org/10.1016/j.neunet.2026.108995"
-        }
-      ],
-      "tags": []
-    },
-    {
-      "id": "4be57ea804ea080f",
-      "title": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
-      "title_en": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
-      "authors": "Zeqi Yu, Heng Zhao, Zuhe Li, Yushan Pan, Xinfei Guo",
-      "authors_en": "Zeqi Yu, Heng Zhao, Zuhe Li, Yushan Pan, Xinfei Guo",
-      "journal": "ACM Transactions on Embedded Computing Systems",
-      "year": 2026,
-      "date": "2026-09-11",
-      "date_precision": "day",
-      "date_source": "Crossref published-online",
-      "type": "journal",
-      "doi": "10.1145/3847669",
-      "news_eligible": true,
-      "date_conflict": false,
-      "member_authors": [
-        "Yushan Pan"
-      ],
-      "member_ids": [
-        "yushan-pan"
-      ],
-      "source_urls": [
-        "https://api.crossref.org/works/10.1145%2F3847669",
-        "https://api.crossref.org/works/10.1145/3847669",
-        "https://doi.org/10.1145/3847669"
-      ],
-      "links": [
-        {
-          "type": "doi",
-          "url": "https://doi.org/10.1145/3847669"
         }
       ],
       "tags": []
@@ -13528,7 +13528,7 @@
   "awards": [],
   "transfers": [],
   "meta": {
-    "updated_at": "2026-10-25",
+    "updated_at": "2026-10-26",
     "paper_count": 381,
     "member_count": 14,
     "sources": [

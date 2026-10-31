@@ -65,6 +65,23 @@
       "doi": "10.1007/s10489-026-07522-5"
     },
     {
+      "id": "97c71d2354e13dd7",
+      "date": "2026-10",
+      "date_precision": "month",
+      "title": "A text-guided cross-hierarchical fusion and multi-task learning framework for multimodal sentiment analysis",
+      "title_en": "A text-guided cross-hierarchical fusion and multi-task learning framework for multimodal sentiment analysis",
+      "desc": "项南、潘昱杉、许志杰的研究成果发表于 Neural Networks。",
+      "desc_en": "Research by Nan Xiang, Yushan Pan, Zhijie Xu, published in Neural Networks.",
+      "link": "https://doi.org/10.1016/j.neunet.2026.108995",
+      "members": [
+        "Nan Xiang",
+        "Yushan Pan",
+        "Zhijie Xu"
+      ],
+      "date_source": "Crossref published-print",
+      "doi": "10.1016/j.neunet.2026.108995"
+    },
+    {
       "id": "f1d963848d984401",
       "date": "2026-08-03",
       "date_precision": "day",
@@ -131,8 +148,8 @@
     }
   ],
   "meta": {
-    "window_start": "2026-07-30",
-    "window_end": "2026-10-30",
-    "updated_at": "2026-10-30"
+    "window_start": "2026-07-31",
+    "window_end": "2026-10-31",
+    "updated_at": "2026-10-31"
   }
 }

@@ -95,61 +95,11 @@
       ],
       "date_source": "XJTLU research portal publication status Published - 3 Aug 2026; Crossref corroborates August 2026",
       "doi": "10.1016/j.knosys.2026.116375"
-    },
-    {
-      "id": "4c87d241bbd82c92",
-      "date": "2026-08",
-      "date_precision": "month",
-      "title": "Multimodal Motion Tracking: A Review",
-      "title_en": "Multimodal Motion Tracking: A Review",
-      "desc": "许志杰的研究成果发表于 IEEE Sensors Journal。",
-      "desc_en": "Research by Zhijie Xu, published in IEEE Sensors Journal.",
-      "link": "https://doi.org/10.1109/jsen.2026.3701620",
-      "members": [
-        "Zhijie Xu"
-      ],
-      "date_source": "Crossref published-print",
-      "doi": "10.1109/jsen.2026.3701620"
-    },
-    {
-      "id": "be6d642e753dc47c",
-      "date": "2026-08",
-      "date_precision": "month",
-      "title": "Mamba-Guided Diffusion for Prediction-Based Industrial Video Anomaly Detection",
-      "title_en": "Mamba-Guided Diffusion for Prediction-Based Industrial Video Anomaly Detection",
-      "desc": "王懿鸿、潘昱杉、许志杰的研究成果发表于 2026 31st International Conference on Automation and Computing (ICAC)。",
-      "desc_en": "Research by Yihong Wang, Yushan Pan, Zhijie Xu, published in 2026 31st International Conference on Automation and Computing (ICAC).",
-      "link": "https://doi.org/10.1109/icac70325.2026.11712289",
-      "members": [
-        "Yihong Wang",
-        "Yushan Pan",
-        "Zhijie Xu"
-      ],
-      "date_source": "Crossref published",
-      "doi": "10.1109/icac70325.2026.11712289"
-    },
-    {
-      "id": "9e0c37aed1bedbcd",
-      "date": "2026-08",
-      "date_precision": "month",
-      "title": "Characteristics of Gaming Behavior Among China’s Middle-aged and Older Population",
-      "title_en": "Characteristics of Gaming Behavior Among China’s Middle-aged and Older Population",
-      "desc": "项南、陈扬斌、王懿鸿、许志杰的研究成果发表于 2026 31st International Conference on Automation and Computing (ICAC)。",
-      "desc_en": "Research by Nan Xiang, Yangbin Chen, Yihong Wang, Zhijie Xu, published in 2026 31st International Conference on Automation and Computing (ICAC).",
-      "link": "https://doi.org/10.1109/icac70325.2026.11712445",
-      "members": [
-        "Nan Xiang",
-        "Yangbin Chen",
-        "Yihong Wang",
-        "Zhijie Xu"
-      ],
-      "date_source": "Crossref published",
-      "doi": "10.1109/icac70325.2026.11712445"
     }
   ],
   "meta": {
-    "window_start": "2026-08-01",
-    "window_end": "2026-11-01",
-    "updated_at": "2026-11-01"
+    "window_start": "2026-08-02",
+    "window_end": "2026-11-02",
+    "updated_at": "2026-11-02"
   }
 }

@@ -80,26 +80,11 @@
       ],
       "date_source": "Crossref published-print",
       "doi": "10.1016/j.neunet.2026.108995"
-    },
-    {
-      "id": "f1d963848d984401",
-      "date": "2026-08-03",
-      "date_precision": "day",
-      "title": "Beyond shortcuts: Mitigating spurious correlations in radiological diagnosis with causal intervention",
-      "title_en": "Beyond shortcuts: Mitigating spurious correlations in radiological diagnosis with causal intervention",
-      "desc": "张海洋的研究成果发表于 Knowledge-Based Systems。",
-      "desc_en": "Research by Haiyang Zhang, published in Knowledge-Based Systems.",
-      "link": "https://doi.org/10.1016/j.knosys.2026.116375",
-      "members": [
-        "Haiyang Zhang"
-      ],
-      "date_source": "XJTLU research portal publication status Published - 3 Aug 2026; Crossref corroborates August 2026",
-      "doi": "10.1016/j.knosys.2026.116375"
     }
   ],
   "meta": {
-    "window_start": "2026-08-03",
-    "window_end": "2026-11-03",
-    "updated_at": "2026-11-03"
+    "window_start": "2026-08-04",
+    "window_end": "2026-11-04",
+    "updated_at": "2026-11-04"
   }
 }

@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "id": "5381096c5e5de755",
+      "date": "2026-11-12",
+      "date_precision": "day",
+      "title": "LaCoCast: Traffic Flow Forecasting with Lag-Aware Cross-Sensor Corroboration",
+      "title_en": "LaCoCast: Traffic Flow Forecasting with Lag-Aware Cross-Sensor Corroboration",
+      "desc": "张海洋的研究成果发表于 Symmetry。",
+      "desc_en": "Research by Haiyang Zhang, published in Symmetry.",
+      "link": "https://doi.org/10.3390/sym18111888",
+      "members": [
+        "Haiyang Zhang"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.3390/sym18111888"
+    },
+    {
       "id": "4be57ea804ea080f",
       "date": "2026-10-24",
       "date_precision": "day",
@@ -83,8 +98,8 @@
     }
   ],
   "meta": {
-    "window_start": "2026-08-12",
-    "window_end": "2026-11-12",
-    "updated_at": "2026-11-12"
+    "window_start": "2026-08-13",
+    "window_end": "2026-11-13",
+    "updated_at": "2026-11-13"
   }
 }

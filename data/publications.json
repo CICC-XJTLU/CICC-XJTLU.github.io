@@ -89,6 +89,38 @@
       ]
     },
     {
+      "id": "5381096c5e5de755",
+      "title": "LaCoCast: Traffic Flow Forecasting with Lag-Aware Cross-Sensor Corroboration",
+      "title_en": "LaCoCast: Traffic Flow Forecasting with Lag-Aware Cross-Sensor Corroboration",
+      "authors": "Yanji Jiang, Hongwei Zhou, Hao Dong, Haiyang Zhang, Zhongbin Luo",
+      "authors_en": "Yanji Jiang, Hongwei Zhou, Hao Dong, Haiyang Zhang, Zhongbin Luo",
+      "journal": "Symmetry",
+      "year": 2026,
+      "date": "2026-11-12",
+      "date_precision": "day",
+      "date_source": "Crossref published-online",
+      "type": "journal",
+      "doi": "10.3390/sym18111888",
+      "news_eligible": true,
+      "date_conflict": false,
+      "member_authors": [
+        "Haiyang Zhang"
+      ],
+      "member_ids": [
+        "haiyang-zhang"
+      ],
+      "source_urls": [
+        "https://api.crossref.org/works/10.3390%2Fsym18111888"
+      ],
+      "links": [
+        {
+          "type": "doi",
+          "url": "https://doi.org/10.3390/sym18111888"
+        }
+      ],
+      "tags": []
+    },
+    {
       "id": "ec133557b02fe01d",
       "title": "DEPT-BT: Learning Parameterized and Revisable Behavior Trees From a Single Demonstration",
       "title_en": "DEPT-BT: Learning Parameterized and Revisable Behavior Trees From a Single Demonstration",
@@ -13523,8 +13555,8 @@
   "awards": [],
   "transfers": [],
   "meta": {
-    "updated_at": "2026-11-12",
-    "paper_count": 381,
+    "updated_at": "2026-11-13",
+    "paper_count": 382,
     "member_count": 14,
     "sources": [
       "ORCID",

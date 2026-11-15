@@ -157,6 +157,41 @@
       "tags": []
     },
     {
+      "id": "bb02a81672ad41dd",
+      "title": "Bidirectional temporal modeling and higher-order hypergraph relation constraints for multimodal sentiment analysis",
+      "title_en": "Bidirectional temporal modeling and higher-order hypergraph relation constraints for multimodal sentiment analysis",
+      "authors": "Zuhe Li, Yiying Mao, Jia Liu, Jun Yu, Haoran Chen, Yangbin Chen, Tao Lei, Chenguang Yang, Yushan Pan",
+      "authors_en": "Zuhe Li, Yiying Mao, Jia Liu, Jun Yu, Haoran Chen, Yangbin Chen, Tao Lei, Chenguang Yang, Yushan Pan",
+      "journal": "Knowledge-Based Systems",
+      "year": 2026,
+      "date": "2026-11",
+      "date_precision": "month",
+      "date_source": "ORCID publication-date",
+      "type": "journal",
+      "doi": "10.1016/j.knosys.2026.117326",
+      "news_eligible": true,
+      "date_conflict": false,
+      "member_authors": [
+        "Yangbin Chen",
+        "Yushan Pan"
+      ],
+      "member_ids": [
+        "yangbin-chen",
+        "yushan-pan"
+      ],
+      "source_urls": [
+        "https://api.crossref.org/works/10.1016%2Fj.knosys.2026.117326",
+        "https://pub.orcid.org/v3.0/0000-0003-1194-7542/work/233457869"
+      ],
+      "links": [
+        {
+          "type": "doi",
+          "url": "https://doi.org/10.1016/j.knosys.2026.117326"
+        }
+      ],
+      "tags": []
+    },
+    {
       "id": "4be57ea804ea080f",
       "title": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
       "title_en": "Stall-Free Software–Hardware Co-Design for Perception-Driven Contrast-Limited Adaptive Histogram Equalization",
@@ -13555,8 +13590,8 @@
   "awards": [],
   "transfers": [],
   "meta": {
-    "updated_at": "2026-11-14",
-    "paper_count": 382,
+    "updated_at": "2026-11-15",
+    "paper_count": 383,
     "member_count": 14,
     "sources": [
       "ORCID",

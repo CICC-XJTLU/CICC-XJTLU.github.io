@@ -89,6 +89,38 @@
       ]
     },
     {
+      "id": "cb25b0a66b948f7b",
+      "title": "I Believe in You: Robot Identity Design and Service Initiative",
+      "title_en": "I Believe in You: Robot Identity Design and Service Initiative",
+      "authors": "Baojie Qiao, Yiming Luo, Di Wu, Sichao Song, Hao Wang, Yushan Pan",
+      "authors_en": "Baojie Qiao, Yiming Luo, Di Wu, Sichao Song, Hao Wang, Yushan Pan",
+      "journal": "ACM Transactions on Human-Robot Interaction",
+      "year": 2026,
+      "date": "2026-11-21",
+      "date_precision": "day",
+      "date_source": "Crossref published-online",
+      "type": "journal",
+      "doi": "10.1145/3871063",
+      "news_eligible": true,
+      "date_conflict": false,
+      "member_authors": [
+        "Yushan Pan"
+      ],
+      "member_ids": [
+        "yushan-pan"
+      ],
+      "source_urls": [
+        "https://api.crossref.org/works/10.1145%2F3871063"
+      ],
+      "links": [
+        {
+          "type": "doi",
+          "url": "https://doi.org/10.1145/3871063"
+        }
+      ],
+      "tags": []
+    },
+    {
       "id": "5381096c5e5de755",
       "title": "LaCoCast: Traffic Flow Forecasting with Lag-Aware Cross-Sensor Corroboration",
       "title_en": "LaCoCast: Traffic Flow Forecasting with Lag-Aware Cross-Sensor Corroboration",
@@ -13591,8 +13623,8 @@
   "awards": [],
   "transfers": [],
   "meta": {
-    "updated_at": "2026-11-22",
-    "paper_count": 383,
+    "updated_at": "2026-11-23",
+    "paper_count": 384,
     "member_count": 14,
     "sources": [
       "ORCID",

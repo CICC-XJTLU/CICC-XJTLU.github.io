@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "id": "cb25b0a66b948f7b",
+      "date": "2026-11-21",
+      "date_precision": "day",
+      "title": "I Believe in You: Robot Identity Design and Service Initiative",
+      "title_en": "I Believe in You: Robot Identity Design and Service Initiative",
+      "desc": "潘昱杉的研究成果发表于 ACM Transactions on Human-Robot Interaction。",
+      "desc_en": "Research by Yushan Pan, published in ACM Transactions on Human-Robot Interaction.",
+      "link": "https://doi.org/10.1145/3871063",
+      "members": [
+        "Yushan Pan"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1145/3871063"
+    },
+    {
       "id": "5381096c5e5de755",
       "date": "2026-11-12",
       "date_precision": "day",
@@ -98,8 +113,8 @@
     }
   ],
   "meta": {
-    "window_start": "2026-08-22",
-    "window_end": "2026-11-22",
-    "updated_at": "2026-11-22"
+    "window_start": "2026-08-23",
+    "window_end": "2026-11-23",
+    "updated_at": "2026-11-23"
   }
 }

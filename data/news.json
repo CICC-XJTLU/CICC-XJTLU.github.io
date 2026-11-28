@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "id": "9057d110c7b5dc51",
+      "date": "2026-11-27",
+      "date_precision": "day",
+      "title": "RelFACT: Reliable and Fast Aging-Aware Cell-to-Path Timing Analysis with Fine-Grained Transistor Stress Modeling",
+      "title_en": "RelFACT: Reliable and Fast Aging-Aware Cell-to-Path Timing Analysis with Fine-Grained Transistor Stress Modeling",
+      "desc": "潘昱杉的研究成果发表于 ACM Transactions on Design Automation of Electronic Systems。",
+      "desc_en": "Research by Yushan Pan, published in ACM Transactions on Design Automation of Electronic Systems.",
+      "link": "https://doi.org/10.1145/3863954",
+      "members": [
+        "Yushan Pan"
+      ],
+      "date_source": "Crossref published-online",
+      "doi": "10.1145/3863954"
+    },
+    {
       "id": "cb25b0a66b948f7b",
       "date": "2026-11-21",
       "date_precision": "day",
@@ -113,8 +128,8 @@
     }
   ],
   "meta": {
-    "window_start": "2026-08-27",
-    "window_end": "2026-11-27",
-    "updated_at": "2026-11-27"
+    "window_start": "2026-08-28",
+    "window_end": "2026-11-28",
+    "updated_at": "2026-11-28"
   }
 }
